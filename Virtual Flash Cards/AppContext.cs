@@ -19,7 +19,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 using VirtualFlashCards.Forms;
 using VirtualFlashCards.QuizData;
 
@@ -31,9 +31,9 @@ namespace VirtualFlashCards
 
         static AppContext()
         {
-            XmlSerializer.RegisterType<Quiz>("quiz");
-            XmlSerializer.RegisterType<Question>("question");
-            XmlSerializer.RegisterType<Answer>("answer");
+            XmlSerializer.Default.RegisterType<Quiz>("quiz");
+            XmlSerializer.Default.RegisterType<Question>("question");
+            XmlSerializer.Default.RegisterType<Answer>("answer");
         }
 
         public AppContext(string[] args)

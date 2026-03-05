@@ -21,7 +21,7 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 
 namespace VirtualFlashCards.QuizData
 {

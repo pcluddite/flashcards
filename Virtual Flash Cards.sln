@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual Flash Cards", "Virtual Flash Cards\Virtual Flash Cards.csproj", "{156019A2-89B5-4564-9D1E-9ADEFF6D58F2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMan", "DataMan\DataMan.csproj", "{26D9068F-CF73-4B51-8F17-3CF2AADF5CB4}"
-EndProject
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quiz", "quiz\quiz.csproj", "{07137082-C7A5-44A1-99CF-DBCB8F531E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual Flash Cards", "Virtual Flash Cards\Virtual Flash Cards.csproj", "{AB356FAA-0982-40C2-9830-685973C4AEF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataman", "..\dataman\dataman\dataman.csproj", "{C264293F-C9F7-E124-640A-D3115A980145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{156019A2-89B5-4564-9D1E-9ADEFF6D58F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{156019A2-89B5-4564-9D1E-9ADEFF6D58F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{156019A2-89B5-4564-9D1E-9ADEFF6D58F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{156019A2-89B5-4564-9D1E-9ADEFF6D58F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26D9068F-CF73-4B51-8F17-3CF2AADF5CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26D9068F-CF73-4B51-8F17-3CF2AADF5CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26D9068F-CF73-4B51-8F17-3CF2AADF5CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26D9068F-CF73-4B51-8F17-3CF2AADF5CB4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07137082-C7A5-44A1-99CF-DBCB8F531E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{07137082-C7A5-44A1-99CF-DBCB8F531E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07137082-C7A5-44A1-99CF-DBCB8F531E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07137082-C7A5-44A1-99CF-DBCB8F531E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB356FAA-0982-40C2-9830-685973C4AEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB356FAA-0982-40C2-9830-685973C4AEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB356FAA-0982-40C2-9830-685973C4AEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB356FAA-0982-40C2-9830-685973C4AEF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C264293F-C9F7-E124-640A-D3115A980145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C264293F-C9F7-E124-640A-D3115A980145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C264293F-C9F7-E124-640A-D3115A980145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C264293F-C9F7-E124-640A-D3115A980145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDE2BFEE-54EF-43D3-ACCC-61C17631DE5F}
 	EndGlobalSection
 EndGlobal

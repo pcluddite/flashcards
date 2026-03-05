@@ -22,7 +22,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 
 namespace VirtualFlashCards.QuizData
 {
@@ -75,7 +75,7 @@ namespace VirtualFlashCards.QuizData
         {
             foreach (XElement optionNode in node.Elements("option"))
             {
-                MultiAnswerOption option = XmlSerializer.Deserialize<MultiAnswerOption>(optionNode);
+                MultiAnswerOption option = XmlSerializer.Default.Deserialize<MultiAnswerOption>(optionNode);
                 OptionDictionary.Add(option.Text, option.IsCorrect);
             }
         }
@@ -136,7 +136,7 @@ namespace VirtualFlashCards.QuizData
             XElement elem = base.ToXml(name);
             foreach (KeyValuePair<string, bool> option in OptionDictionary)
             {
-                elem.Add(XmlSerializer.Serialize(new MultiAnswerOption(option.Key, option.Value), "option"));
+                elem.Add(XmlSerializer.Default.Serialize(new MultiAnswerOption(option.Key, option.Value), "option"));
             }
             return elem;
         }
@@ -175,10 +175,10 @@ namespace VirtualFlashCards.QuizData
 
         private class MultiAnswerOption : IXmlSerializableObject
         {
-            [XmlSerialize(Name = "value", Default = false)]
+            [XmlSerializableField(Name = "value", Default = false)]
             public readonly bool IsCorrect;
 
-            [XmlSerialize(Name = "text")]
+            [XmlSerializableField(Name = "text")]
             public readonly string Text;
 
             public MultiAnswerOption()

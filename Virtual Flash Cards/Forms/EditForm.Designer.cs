@@ -46,180 +46,178 @@ namespace VirtualFlashCards.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
-            this.imgCard = new System.Windows.Forms.PictureBox();
-            this.grpAnswer = new System.Windows.Forms.GroupBox();
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboAnswerType = new System.Windows.Forms.ComboBox();
-            this.btnAnswerList = new System.Windows.Forms.Button();
-            this.txtAnswer = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCard)).BeginInit();
-            this.grpAnswer.SuspendLayout();
-            this.menuStrip.SuspendLayout();
-            this.SuspendLayout();
+            imgCard = new PictureBox();
+            grpAnswer = new GroupBox();
+            txtAnswer = new TextBox();
+            btnAnswerList = new Button();
+            comboAnswerType = new ComboBox();
+            menuStrip = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            newToolStripMenuItem = new ToolStripMenuItem();
+            openToolStripMenuItem = new ToolStripMenuItem();
+            saveToolStripMenuItem = new ToolStripMenuItem();
+            saveAsToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)imgCard).BeginInit();
+            grpAnswer.SuspendLayout();
+            menuStrip.SuspendLayout();
+            SuspendLayout();
             // 
             // imgCard
             // 
-            this.imgCard.Image = global::VirtualFlashCards.Properties.Resources.index_card;
-            this.imgCard.Location = new System.Drawing.Point(12, 27);
-            this.imgCard.Name = "imgCard";
-            this.imgCard.Size = new System.Drawing.Size(425, 250);
-            this.imgCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgCard.TabIndex = 0;
-            this.imgCard.TabStop = false;
+            imgCard.Image = Virtual_Flash_Cards.Properties.Resources.index_card;
+            imgCard.Location = new Point(14, 31);
+            imgCard.Margin = new Padding(4, 3, 4, 3);
+            imgCard.Name = "imgCard";
+            imgCard.Size = new Size(425, 250);
+            imgCard.SizeMode = PictureBoxSizeMode.AutoSize;
+            imgCard.TabIndex = 0;
+            imgCard.TabStop = false;
             // 
             // grpAnswer
             // 
-            this.grpAnswer.Controls.Add(this.txtAnswer);
-            this.grpAnswer.Controls.Add(this.btnAnswerList);
-            this.grpAnswer.Controls.Add(this.comboAnswerType);
-            this.grpAnswer.Location = new System.Drawing.Point(12, 283);
-            this.grpAnswer.Name = "grpAnswer";
-            this.grpAnswer.Size = new System.Drawing.Size(425, 61);
-            this.grpAnswer.TabIndex = 1;
-            this.grpAnswer.TabStop = false;
-            this.grpAnswer.Text = "Answer";
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(449, 24);
-            this.menuStrip.TabIndex = 3;
-            this.menuStrip.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.openToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.newToolStripMenuItem.Text = "&New";
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.openToolStripMenuItem.Text = "&Open";
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.saveToolStripMenuItem.Text = "&Save";
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.saveAsToolStripMenuItem.Text = "&Save As";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "E&dit";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "&Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "&About";
-            // 
-            // comboAnswerType
-            // 
-            this.comboAnswerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboAnswerType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboAnswerType.FormattingEnabled = true;
-            this.comboAnswerType.Location = new System.Drawing.Point(6, 19);
-            this.comboAnswerType.Name = "comboAnswerType";
-            this.comboAnswerType.Size = new System.Drawing.Size(170, 28);
-            this.comboAnswerType.TabIndex = 1;
-            this.comboAnswerType.SelectedIndexChanged += new System.EventHandler(this.comboAnswerType_SelectedIndexChanged);
-            // 
-            // btnAnswerList
-            // 
-            this.btnAnswerList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnswerList.Location = new System.Drawing.Point(182, 19);
-            this.btnAnswerList.Name = "btnAnswerList";
-            this.btnAnswerList.Size = new System.Drawing.Size(237, 28);
-            this.btnAnswerList.TabIndex = 2;
-            this.btnAnswerList.Text = "Manage Options";
-            this.btnAnswerList.UseVisualStyleBackColor = true;
+            grpAnswer.Controls.Add(txtAnswer);
+            grpAnswer.Controls.Add(btnAnswerList);
+            grpAnswer.Controls.Add(comboAnswerType);
+            grpAnswer.Location = new Point(14, 327);
+            grpAnswer.Margin = new Padding(4, 3, 4, 3);
+            grpAnswer.Name = "grpAnswer";
+            grpAnswer.Padding = new Padding(4, 3, 4, 3);
+            grpAnswer.Size = new Size(496, 70);
+            grpAnswer.TabIndex = 1;
+            grpAnswer.TabStop = false;
+            grpAnswer.Text = "Answer";
             // 
             // txtAnswer
             // 
-            this.txtAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnswer.Location = new System.Drawing.Point(182, 20);
-            this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(237, 26);
-            this.txtAnswer.TabIndex = 3;
+            txtAnswer.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtAnswer.Location = new Point(212, 23);
+            txtAnswer.Margin = new Padding(4, 3, 4, 3);
+            txtAnswer.Name = "txtAnswer";
+            txtAnswer.Size = new Size(276, 26);
+            txtAnswer.TabIndex = 3;
+            // 
+            // btnAnswerList
+            // 
+            btnAnswerList.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAnswerList.Location = new Point(212, 22);
+            btnAnswerList.Margin = new Padding(4, 3, 4, 3);
+            btnAnswerList.Name = "btnAnswerList";
+            btnAnswerList.Size = new Size(276, 32);
+            btnAnswerList.TabIndex = 2;
+            btnAnswerList.Text = "Manage Options";
+            btnAnswerList.UseVisualStyleBackColor = true;
+            // 
+            // comboAnswerType
+            // 
+            comboAnswerType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboAnswerType.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboAnswerType.FormattingEnabled = true;
+            comboAnswerType.Location = new Point(7, 22);
+            comboAnswerType.Margin = new Padding(4, 3, 4, 3);
+            comboAnswerType.Name = "comboAnswerType";
+            comboAnswerType.Size = new Size(198, 28);
+            comboAnswerType.TabIndex = 1;
+            comboAnswerType.SelectedIndexChanged += comboAnswerType_SelectedIndexChanged;
+            // 
+            // menuStrip
+            // 
+            menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip.Location = new Point(0, 0);
+            menuStrip.Name = "menuStrip";
+            menuStrip.Padding = new Padding(7, 2, 0, 2);
+            menuStrip.Size = new Size(524, 24);
+            menuStrip.TabIndex = 3;
+            menuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, saveToolStripMenuItem, saveAsToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // newToolStripMenuItem
+            // 
+            newToolStripMenuItem.Name = "newToolStripMenuItem";
+            newToolStripMenuItem.Size = new Size(114, 22);
+            newToolStripMenuItem.Text = "&New";
+            // 
+            // openToolStripMenuItem
+            // 
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new Size(114, 22);
+            openToolStripMenuItem.Text = "&Open";
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(114, 22);
+            saveToolStripMenuItem.Text = "&Save";
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            saveAsToolStripMenuItem.Size = new Size(114, 22);
+            saveAsToolStripMenuItem.Text = "&Save As";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(111, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(114, 22);
+            exitToolStripMenuItem.Text = "E&xit";
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(39, 20);
+            editToolStripMenuItem.Text = "E&dit";
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Text = "&Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(107, 22);
+            aboutToolStripMenuItem.Text = "&About";
             // 
             // EditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 364);
-            this.Controls.Add(this.grpAnswer);
-            this.Controls.Add(this.imgCard);
-            this.Controls.Add(this.menuStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip;
-            this.MaximizeBox = false;
-            this.Name = "EditForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit Quiz";
-            ((System.ComponentModel.ISupportInitialize)(this.imgCard)).EndInit();
-            this.grpAnswer.ResumeLayout(false);
-            this.grpAnswer.PerformLayout();
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(524, 420);
+            Controls.Add(grpAnswer);
+            Controls.Add(imgCard);
+            Controls.Add(menuStrip);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip;
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            Name = "EditForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Edit Quiz";
+            ((System.ComponentModel.ISupportInitialize)imgCard).EndInit();
+            grpAnswer.ResumeLayout(false);
+            grpAnswer.PerformLayout();
+            menuStrip.ResumeLayout(false);
+            menuStrip.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

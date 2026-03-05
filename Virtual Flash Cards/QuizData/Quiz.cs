@@ -19,7 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Linq;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 
 namespace VirtualFlashCards.QuizData
 {
@@ -94,7 +94,7 @@ namespace VirtualFlashCards.QuizData
         public static Quiz FromFile(string path)
         {
             XDocument doc = XDocument.Load(path);
-            return XmlSerializer.Deserialize<Quiz>(doc.Root);
+            return XmlSerializer.Default.Deserialize<Quiz>(doc.Root);
         }
 
         public static Quiz FromXml(XElement quizNode, XName name)
@@ -108,7 +108,7 @@ namespace VirtualFlashCards.QuizData
             Quiz q = new Quiz();
             foreach (XElement question in quizNode.Elements("question"))
             {
-                q.Add(XmlSerializer.Deserialize<Question>(question));
+                q.Add(XmlSerializer.Default.Deserialize<Question>(question));
             }
             return q;
         }
@@ -119,7 +119,7 @@ namespace VirtualFlashCards.QuizData
             quizNode.SetAttributeValue("version", VERSION);
             foreach (Question q in allQuestions)
             {
-                quizNode.Add(XmlSerializer.Serialize<Question>(q, "question"));
+                quizNode.Add(XmlSerializer.Default.Serialize<Question>(q, "question"));
             }
             return quizNode;
         }

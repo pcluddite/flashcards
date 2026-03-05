@@ -16,16 +16,16 @@
 //    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 using System.Xml;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 
 namespace VirtualFlashCards.QuizData
 {
     public class Question : IXmlSerializableObject
     {
-        [XmlSerialize(Name = "prompt")]
+        [XmlSerializableProperty(Name = "prompt")]
         public string Prompt { get; set; }
 
-        [XmlSerialize(Name = "answer")]
+        [XmlSerializableProperty(Name = "answer")]
         public Answer Answer { get; set; }
 
         public Question()

@@ -19,7 +19,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 using System.Xml.Linq;
 
 namespace VirtualFlashCards.QuizData
