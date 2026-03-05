@@ -19,7 +19,7 @@ using System;
 using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 
 namespace Baxendale.Quiz.Objects
 {

@@ -20,8 +20,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using Baxendale.DataManagement.Collections;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Collections;
+using Baxendale.Data.Xml;
 
 namespace Baxendale.Quiz.Objects
 {
@@ -48,8 +48,8 @@ namespace Baxendale.Quiz.Objects
                 foreach (XElement optionNode in node.Elements("option").Randomize())
                 {
                     if (!sequence.MoveNext())
-                        throw new XmlSerializationException("Too many answers specified for the question");
-                    OptionDictionary.Add(sequence.Current, XmlSerializer.Deserialize<MultiAnswerOption>(optionNode));
+                        throw new XmlSerializationException(optionNode, "Too many answers specified for the question");
+                    OptionDictionary.Add(sequence.Current, XmlSerializer.Default.Deserialize<MultiAnswerOption>(optionNode));
                 }
             }
         }
@@ -72,7 +72,7 @@ namespace Baxendale.Quiz.Objects
         {
             XElement elem = base.ToXml(name);
             foreach (MultiAnswerOption option in OptionDictionary.Values)
-                elem.Add(XmlSerializer.Serialize(option, "option"));
+                elem.Add(XmlSerializer.Default.Serialize(option, "option"));
             return elem;
         }
 

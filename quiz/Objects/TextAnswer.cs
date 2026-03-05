@@ -17,7 +17,7 @@
 //
 using System;
 using System.Xml.Linq;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 
 namespace Baxendale.Quiz.Objects
 {

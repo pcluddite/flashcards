@@ -16,7 +16,7 @@
 //    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 using System;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Xml;
 
 namespace Baxendale.Quiz.Objects
 {
@@ -24,10 +24,10 @@ namespace Baxendale.Quiz.Objects
     {
         protected class MultiAnswerOption : IEquatable<MultiAnswerOption>, IXmlSerializableObject
         {
-            [XmlSerialize(Name = "value", Default = false)]
+            [XmlSerializableProperty(Name = "value", Default = false)]
             public virtual bool IsCorrect { get; set; }
 
-            [XmlSerialize(Name = "text")]
+            [XmlSerializableProperty(Name = "text")]
             public virtual string Text { get; set; }
 
             public MultiAnswerOption()

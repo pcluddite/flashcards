@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using Baxendale.DataManagement.Collections;
+using Baxendale.Data.Collections;
 
 namespace Baxendale.Quiz.Commands
 {

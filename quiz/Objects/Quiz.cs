@@ -19,8 +19,8 @@ using System;
 using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Linq;
-using Baxendale.DataManagement.Collections;
-using Baxendale.DataManagement.Xml;
+using Baxendale.Data.Collections;
+using Baxendale.Data.Xml;
 
 namespace Baxendale.Quiz.Objects
 {
@@ -85,7 +85,7 @@ namespace Baxendale.Quiz.Objects
         public static Quiz FromFile(string path)
         {
             XDocument doc = XDocument.Load(path);
-            return XmlSerializer.Deserialize<Quiz>(doc.Root);
+            return XmlSerializer.Default.Deserialize<Quiz>(doc.Root);
         }
 
         public static Quiz FromXml(XElement quizNode, XName name)
@@ -99,7 +99,7 @@ namespace Baxendale.Quiz.Objects
             Quiz q = new Quiz();
             foreach (XElement question in quizNode.Elements("question"))
             {
-                q.Add(XmlSerializer.Deserialize<Question>(question));
+                q.Add(XmlSerializer.Default.Deserialize<Question>(question));
             }
             return q;
         }
@@ -110,7 +110,7 @@ namespace Baxendale.Quiz.Objects
             quizNode.SetAttributeValue("version", VERSION);
             foreach (Question q in allQuestions)
             {
-                quizNode.Add(XmlSerializer.Serialize<Question>(q, "question"));
+                quizNode.Add(XmlSerializer.Default.Serialize<Question>(q, "question"));
             }
             return quizNode;
         }

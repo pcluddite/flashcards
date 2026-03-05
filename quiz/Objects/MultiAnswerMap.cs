@@ -19,7 +19,7 @@ using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using Baxendale.DataManagement.Collections;
+using Baxendale.Data.Collections;
 
 namespace Baxendale.Quiz.Objects
 {
@@ -158,7 +158,7 @@ namespace Baxendale.Quiz.Objects
 
             public IEnumerator<KeyValuePair<MultiAnswerKey, MultiAnswerOption>> GetEnumerator()
             {
-                foreach (char alpha in 'a'.Sequence(options.Count))
+                foreach (char alpha in 'a'.AlphaSequence(options.Count))
                     yield return new KeyValuePair<MultiAnswerKey, MultiAnswerOption>(alpha, options[alpha]);
             }
 
